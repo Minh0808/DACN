@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Minh0808/DACN/satoshi/static/css/main.06e8f2e5.css",
+    "main.js": "/Minh0808/DACN/satoshi/static/js/main.d4e90a5d.js",
+    "static/js/787.352491e5.chunk.js": "/Minh0808/DACN/satoshi/static/js/787.352491e5.chunk.js",
+    "index.html": "/Minh0808/DACN/satoshi/index.html",
+    "main.06e8f2e5.css.map": "/Minh0808/DACN/satoshi/static/css/main.06e8f2e5.css.map",
+    "main.d4e90a5d.js.map": "/Minh0808/DACN/satoshi/static/js/main.d4e90a5d.js.map",
+    "787.352491e5.chunk.js.map": "/Minh0808/DACN/satoshi/static/js/787.352491e5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.06e8f2e5.css",
+    "static/js/main.d4e90a5d.js"
+  ]
+}

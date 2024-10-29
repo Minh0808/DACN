@@ -1,0 +1,28 @@
+{
+  "short_name": "Satoshi NAKAMOTO",
+  "name": "Satoshi NaKaMoTo",
+  "description": "Satoshi NAKAMOTO",
+  "homepage_url": "https://satsbrc.vip/",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "./images/favicon/favicon-_3_.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "./images/favicon/favicon-_4_.ico",
+      "type": "image/ico",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./images/favicon/favicon-_5_.ico",
+      "type": "image/ico",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
