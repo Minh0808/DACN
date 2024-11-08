@@ -41,12 +41,14 @@ const HomePage1: React.FC = () => {
     <Background>
       <Menu>
         <Wraper>
-          <img className="Logo" src={images.Logo} alt="Logo" />
-          <img
-            className="Logo-Mobile"
-            src={images.LogoMobile}
-            alt="Logo-Mobile"
-          />
+          <Link to={"/"}>
+            <img className="Logo" src={images.Logo} alt="Logo" />
+            <img
+              className="Logo-Mobile"
+              src={images.LogoMobile}
+              alt="Logo-Mobile"
+            />
+          </Link>
           <ButtonNetwork>
             {/* <Market>
               <Link to={"/market"} target="blank">
@@ -64,7 +66,7 @@ const HomePage1: React.FC = () => {
               AirDrop
             </Link>
             <Link to={"/market"} className="Link">
-              Marketplace
+              Crypto New Feed
             </Link>
           </ButtonNetwork>
           <Connect onClick={connectWallet}>

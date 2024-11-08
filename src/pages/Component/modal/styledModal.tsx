@@ -116,11 +116,13 @@ export const ModalContainer_Token = styled.div`
 export const Information = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
 `
 
 export const Input = styled.input`
-  width: 400px;
+  width: 405px;
   height: 30px;
+  border-radius: 15px;
 `
 export const Left = styled.div`
   display: flex;

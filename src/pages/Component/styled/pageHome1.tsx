@@ -56,10 +56,11 @@ export const Wraper = styled.div`
 `;
 export const ButtonNetwork = styled.div`
   width: 350px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
   .Link {
     color: white;
     text-decoration: none;
@@ -67,6 +68,22 @@ export const ButtonNetwork = styled.div`
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+  }
+    :hover {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(
+      90deg,
+      #e86e00 -1.64%,
+      #f18900 3.29%,
+      #f99f00 9.22%,
+      #fdac00 14.15%,
+      #ffb100 19.09%,
+      #e86e00 97.07%
+    );
+    border: 1px solid white;
+    border-radius: 5px;
   }
   @media (max-width: 575px) {
     display: none;

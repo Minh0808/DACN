@@ -45,26 +45,23 @@ const Wraper = styled.div`
 `;
 const ButtonNetwork = styled.div`
   width: 350px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: 20px;
-  position: relative;
-  left: -200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
   .Link {
-    width: 103px;
-    height: 30px;
     color: white;
     text-decoration: none;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+  }
+    :hover {
+    height: 30px;
     display: flex;
     align-items: center;
-    justify-content: center;
-  }
-  :hover {
     background: linear-gradient(
       90deg,
       #e86e00 -1.64%,
@@ -75,7 +72,7 @@ const ButtonNetwork = styled.div`
       #e86e00 97.07%
     );
     border: 1px solid white;
-    border-radius: 8px;
+    border-radius: 5px;
   }
   @media (max-width: 575px) {
     display: none;
@@ -102,12 +99,14 @@ const MenuHome: React.FC = () => {
     <>
       <Menu>
         <Wraper>
-          <img className="Logo" src={images.Logo} alt="Logo" />
-          <img
-            className="Logo-Mobile"
-            src={images.LogoMobile}
-            alt="Logo-Mobile"
-          />
+        <Link to={"/"}>
+            <img className="Logo" src={images.Logo} alt="Logo" />
+            <img
+              className="Logo-Mobile"
+              src={images.LogoMobile}
+              alt="Logo-Mobile"
+            />
+          </Link>
           <ButtonNetwork>
             <Link to={"/tokenomic"} className="Link">
               Tokenomic
@@ -116,7 +115,7 @@ const MenuHome: React.FC = () => {
               AirDrop
             </Link>
             <Link to={"/market"} className="Link">
-              Marketplace
+              Crypto New Feed
             </Link>
           </ButtonNetwork>
           <Connect
