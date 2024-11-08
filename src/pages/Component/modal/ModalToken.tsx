@@ -1,12 +1,19 @@
-import { ModalContainer_Token,Information,Text,Input,Left,Right, Close,Act,Buy,Sell,Send,Column } from "./styledModal"
+import { ModalContainer_Token,Information,Text,Input,Left,Right, Close,Act,Connect,Sell,Send,Column, BoxSendToken } from "./styledModal"
 import React,{ useState, useEffect } from "react"
 import { ethers} from "ethers";
-
+import ModalSendToken from "./ModalSendToken";
   const ModalToken: React.FC <{ onClose: () => void }> = ({ onClose }) => {
-    
+
+    const [OpenSendToken, setOpenmodalToken] = useState(false)
     const [accountGB, setAccount] =  useState('')
     const [NameToken, setNameToken] = useState('')
     const [tokenBalance, setTokenBalance] = useState('')
+    const [ID, setID] = useState('')
+    const [NumberToken, setNumberToken] = useState('')
+
+    const CloseSendToken = () =>{
+      setOpenmodalToken(false)
+    }
     const getSigner = async () => {
         if (typeof window !== "undefined" && window.ethereum) {
           try {
@@ -48,13 +55,24 @@ import { ethers} from "ethers";
         setTokenBalance(formattedBalance)
         console.log(`Balance: ${ethers.formatUnits(balance.toString(), decimal)}`)
         // tokenContract.balanceOf(signerData.account).then(rs => console.log(ethers.formatUnits(rs.toString(), decimal)))
-        }
       }
-      
+    }
 
-      useEffect(() => {
-        getTokenInfo()
-      }, [])
+      // useEffect(() => {
+      //   getTokenInfo()
+      // }, [])
+
+      const BoxsenToken =  () => {
+        setOpenmodalToken(true)
+        console.log("sendToken:", "active")
+      }
+
+      const IDwallet = "0x4DE70A420e5d6da282820745134dc0990126Bd2d"
+      
+      
+      
+      
+      
     return (
         
         <ModalContainer_Token>
@@ -63,22 +81,27 @@ import { ethers} from "ethers";
                     <Text>Address:</Text>
                     <Text>Token:</Text>
                     <Text>Balance:</Text>
+                    {/* <Text>ID nhận:</Text>
+                    <Text>Số lượng:</Text> */}
                 </Left>
                 <Right>
                     <Input type="text"  value={accountGB} readOnly/>
                     <Input type="text"  value={NameToken} readOnly/>
                     <Input type="text" value={tokenBalance} readOnly/>
+                    {/* <Input type="text" value={IDwallet}/>
+                    <Input type="text" name="fname" placeholder="Number"/> */}
                 </Right>
             </Information>
+            
             <Act>
-                <Column onClick={getSigner}>
-                    <Buy/>
-                    <div>Mua</div>
+                <Column onClick={getTokenInfo}>
+                    <Connect/>
+                    <div>Connect Wallet</div>
                 </Column>
-                <Column>
+                {/* <Column>
                     <Sell/>
                     <div>Bán</div>
-                </Column>
+                </Column> */}
                 <Column>
                     <Send/>
                     <div>Gửi</div>
@@ -88,6 +111,9 @@ import { ethers} from "ethers";
                     <div>Đóng</div>
                 </Column>
             </Act>
+            <div>
+              {OpenSendToken && < ModalSendToken onClose={CloseSendToken}/>} 
+            </div>
         </ModalContainer_Token>
     )
 }

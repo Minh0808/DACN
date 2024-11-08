@@ -149,10 +149,10 @@ export const Send = styled.div`
   border-radius: 25px;
   border: none;
 `
-export const Buy = styled.div`
+export const Connect = styled.div`
   width: 50px;
   height: 50px;
-  background-image: url(./images/HomeIcon/buyToken.png);
+  background-image: url(./images/HomeIcon/wallet.png);
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 25px;
@@ -185,4 +185,22 @@ export const Column = styled.button`
   border: none;
   background: white;
   color: blue;
+`
+export const BoxSendToken = styled.div`
+  width: 700px;
+  height: 390px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed;
+  left: 30%;
+  top: 130px;
+  background: red;
+  justify-content: flex-start;
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px 6px #ffffff47;
+  color: black;
+  line-height: 2;
+  padding-top: 20px;
+  gap: 100px;
 `

@@ -19,7 +19,7 @@ import {
   Title,
   Wraper,
 } from "./Component/styled/pageHome1";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import ModalToken from "./Component/modal/ModalToken";
 
