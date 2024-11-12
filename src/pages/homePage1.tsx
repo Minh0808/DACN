@@ -18,13 +18,15 @@ import {
   Text2,
   Title,
   Wraper,
+  Animation
 } from "./Component/styled/pageHome1";
 import React, { useState } from "react";
-
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import ModalToken from "./Component/modal/ModalToken";
 
 
-const HomePage1: React.FC = () => {
+const HomePage1: React.FC = React.memo(() => {
 
   const [OpenmodalToken, setOpenmodalToken] =  useState(false);
   const connectWallet = async () => {
@@ -37,6 +39,12 @@ const HomePage1: React.FC = () => {
   }
   const a =
     '{"p":"brc-20","op":"deploy","tick":"SN20","max":"21000000000000000","lim":"21000000000000000"}';
+
+    
+    AOS.init({
+      duration: 1000,
+      delay: 200,
+  });
   return (
     <Background>
       <Menu>
@@ -65,7 +73,7 @@ const HomePage1: React.FC = () => {
             <Link to={"/aridrop"} className="Link">
               AirDrop
             </Link>
-            <Link to={"/market"} className="Link">
+            <Link to={"/crypto"} className="Link">
               Crypto New Feed
             </Link>
           </ButtonNetwork>
@@ -78,8 +86,10 @@ const HomePage1: React.FC = () => {
           {OpenmodalToken && <ModalToken  onClose={closeModal}/>}
       </div>
       <Title>
-        <img className="IconCoin1" src={images.IconCoin1} alt="IconCoin1" />
-        <div className="Title">{a}</div>
+        <Animation>
+          <img className="IconCoin1" src={images.IconCoin1} alt="IconCoin1" />
+          <div className="Title">{a}</div>
+        </Animation>
       </Title>
       <BodyContainer>
         <DivLeft>
@@ -91,7 +101,7 @@ const HomePage1: React.FC = () => {
             </div>
             on Bitcoin Chain.
           </Text1>
-          <IconNetwork>
+          <IconNetwork data-aos="fade-down">
             <a href="https://twitter.com/satsbrc" target="blank">
               <img className="tw" src={images.IconHome1} alt="tw" />
             </a>
@@ -105,7 +115,7 @@ const HomePage1: React.FC = () => {
             <div className="Row-1">on crypto exchange</div>
           </Text2>
           <IconContainer>
-            <IconCoins>
+            <IconCoins data-aos="fade-right">
               <Row1
                 className="Row1"
                 href="https://unisat.io/market/brc20?tick=sn20"
@@ -159,7 +169,7 @@ const HomePage1: React.FC = () => {
                 />
               </Row1>
             </IconCoins>
-            <IconCoins>
+            <IconCoins data-aos="fade-left">
               <Row1>
                 <Text>MEXC</Text>
                 <img
@@ -211,11 +221,11 @@ const HomePage1: React.FC = () => {
             </IconCoins>
           </IconContainer>
         </DivLeft>
-        <DivRight>
+        <DivRight data-aos="fade-up">
           <img className="Images" src={images.IconHome3} alt="Images" />
         </DivRight>
       </BodyContainer>
     </Background>
   );
-};
+});
 export default HomePage1;

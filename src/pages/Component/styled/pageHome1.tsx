@@ -1,9 +1,19 @@
-import styled from "styled-components";
+import styled , {keyframes} from "styled-components";
+
+const slideRightToLeft = keyframes`
+  0% {
+    transform: translateX(120%); /* Bắt đầu từ bên phải */
+  }
+  100% {
+    transform: translateX(-150%); /* Kết thúc ở bên trái */
+  }
+`;
 
 export const Background = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
+  align-items: center;
   flex-direction: column;
   gap: 30px;
   padding-top: 20px;
@@ -126,7 +136,7 @@ export const Title = styled.div`
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  width: 100%;
+  width: 70%;
   height: 50px;
   white-space: nowrap;
   box-sizing: border-box;
@@ -134,6 +144,7 @@ export const Title = styled.div`
   align-items: center;
   justify-content: center;
   gap: 10px;
+  overflow: hidden;
   .IconCoin1 {
     width: 24px;
   }
@@ -192,7 +203,17 @@ export const Title = styled.div`
     }
   }
 `;
+
+export const Animation = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  animation: ${slideRightToLeft} 15s linear infinite;
+`
+
 export const BodyContainer = styled.div`
+  width:100%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;

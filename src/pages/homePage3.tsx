@@ -48,7 +48,7 @@ const PageHome3: React.FC = () => {
         </Text1>
         <TextContainer>
           <TextLeft>
-            <Row>
+            <Row data-aos="fade-down-right">
               <Text3>Reliability</Text3>
               <Text4>
                 SN20 Bridge prioritizes security, leveraging a decentralized
@@ -59,7 +59,7 @@ const PageHome3: React.FC = () => {
                 Web3 approach enhances cross-chain security
               </Text4>
             </Row>
-            <Row>
+            <Row data-aos="fade-up-right">
               <Text3>Compatibility</Text3>
               <Text4>
                 BRC-20X, a token protocol focused on cross-chain
@@ -79,7 +79,7 @@ const PageHome3: React.FC = () => {
             alt="TitleMobile"
           />
           <TextLeft className="Mobile">
-            <Row>
+            <Row data-aos="fade-left">
               <Text3>Stimulus</Text3>
               <Text4>
                 We promote users active involvement in cross-chain transfers of

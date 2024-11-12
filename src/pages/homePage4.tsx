@@ -74,7 +74,7 @@ const PageHome4: React.FC = () => {
 
       <Wraper>
         <ColumnLeft>
-          <div className="Row-1">
+          <div className="Row-1" data-aos="flip-up">
             <Img
               className={Active === 1 ? "active" : ""}
               onClick={() => HandleActive(1)}
@@ -112,7 +112,7 @@ const PageHome4: React.FC = () => {
               />
             </Img>
           </div>
-          <div className="Row-2">
+          <div className="Row-2" data-aos="flip-up">
             <Img
               className={Active === 2 ? "active" : ""}
               onClick={() => HandleActive_2(2)}
@@ -151,7 +151,7 @@ const PageHome4: React.FC = () => {
               />
             </Img>
           </div>
-          <div className="Row-3">
+          <div className="Row-3" data-aos="flip-up">
             <Img
               className={Active === 3 ? "active" : ""}
               onClick={() => HandleActive_3(3)}
@@ -189,7 +189,7 @@ const PageHome4: React.FC = () => {
               />
             </Img>
           </div>
-          <div className="Row-4">
+          <div className="Row-4" data-aos="flip-up">
             <Img
               className={Active === 4 ? "active" : ""}
               onClick={() => HandleActive_4(4)}
@@ -230,14 +230,14 @@ const PageHome4: React.FC = () => {
             </Img>
           </div>
         </ColumnLeft>
-        <Modal className="Modal1" onClick={HandleCloseModal1}>
+        <Modal className="Modal1" onClick={HandleCloseModal1} >
           {OpenModal1 && <Modal_1 onClose={HandleCloseModal1} />}
           {OpenModal2 && <Modal_2 onClose={HandleCloseModal1} />}
           {OpenModal3 && <Modal_3 onClose={HandleCloseModal1} />}
           {OpenModal4 && <Modal_4 onClose={HandleCloseModal1} />}
         </Modal>
         {Closebox && (
-          <ColumnRight>
+          <ColumnRight data-aos="fade-left">
             <Text className="text1">What are BRC-20 tokens?</Text>
             <Text className="text">
               BRC-20 tokens are built on the Bitcoin Network using the ordinals

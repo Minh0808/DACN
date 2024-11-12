@@ -61,7 +61,9 @@ const images = {
     IconJoin:'/images/AirIcon/Join.png',
     IconCheck:'/images/AirIcon/check.png',
     IconError:'/images/AirIcon/error.png',
-    Chart_1:'/images/CryptoIcon/Chart_1.png',
-    Chart_2:'/images/CryptoIcon/Chart_2.png',
+    Chart_1:'/images/CryptoIcon/char1.png',
+    Chart_2:'/images/CryptoIcon/char2.png',
+    Transactionss:'/images/CryptoIcon/Trans.png',
+    NewsFeed:'/images/CryptoIcon/Newsfeed.png',
 }
 export default images

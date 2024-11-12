@@ -4,7 +4,7 @@ import ReactDOM from "react-dom/client";
 import { Link, Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import HomePage from "./HomePage";
-import Market from "./pages/market";
+import TokenInfo from "./pages/Crypto";
 import Tokenomic from "./pages/Tokenomic";
 import Airdrop from "./pages/Airdrop";
 
@@ -17,7 +17,7 @@ root.render(
       <Route path="/" element={<HomePage />} />
       <Route path="/tokenomic" element={<Tokenomic />} />
       <Route path="/airdrop" element={<Airdrop />} />
-      <Route path="/market" element={<Market />} />
+      <Route path="/crypto" element={<TokenInfo />} />
     </Routes>
   </Router>
 );

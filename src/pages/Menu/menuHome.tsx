@@ -114,7 +114,7 @@ const MenuHome: React.FC = () => {
             <Link to={"/airdrop"} className="Link">
               AirDrop
             </Link>
-            <Link to={"/market"} className="Link">
+            <Link to={"/crypto"} className="Link">
               Crypto New Feed
             </Link>
           </ButtonNetwork>
