@@ -65,5 +65,6 @@ const images = {
     Chart_2:'/images/CryptoIcon/char2.png',
     Transactionss:'/images/CryptoIcon/Trans.png',
     NewsFeed:'/images/CryptoIcon/Newsfeed.png',
+    BRboxchat:'/images/AirIcon/a.png',
 }
 export default images

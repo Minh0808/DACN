@@ -104,7 +104,7 @@ export const ModalContainer_Token = styled.div`
   align-items: flex-start;
   position: fixed;
   left: 30%;
-  background: white;
+  background: linear-gradient(90deg, #e86e00 -1.64%, #f18900 3.29%, #f99f00 9.22%, #fdac00 14.15%, #ffb100 19.09%, #e86e00 97.07%);
   justify-content: flex-start;
   border-radius: 15px;
   box-shadow: 0px 0px 5px 6px #ffffff47;
@@ -112,6 +112,7 @@ export const ModalContainer_Token = styled.div`
   line-height: 2;
   padding-top: 20px;
   gap: 100px;
+  z-index: 1000;
 `
 export const Information = styled.div`
   display: flex;
@@ -122,7 +123,8 @@ export const Information = styled.div`
 export const Input = styled.input`
   width: 405px;
   height: 30px;
-  border-radius: 15px;
+  border-radius: 5px;
+  border: none;
 `
 export const Left = styled.div`
   display: flex;
@@ -137,7 +139,7 @@ export const Act = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 50px;
 `
 export const Send = styled.div`
@@ -185,24 +187,24 @@ export const Column = styled.button`
   flex-direction: column;
   align-items: center;
   border: none;
-  background: white;
+  background: none;
   color: blue;
 `
 export const BoxSendToken = styled.div`
-  width: 700px;
-  height: 390px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  position: fixed;
-  left: 30%;
-  top: 130px;
-  background: red;
-  justify-content: flex-start;
-  border-radius: 15px;
-  box-shadow: 0px 0px 5px 6px #ffffff47;
-  color: black;
-  line-height: 2;
-  padding-top: 20px;
-  gap: 100px;
+    width: 630px;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    left: 33%;
+    top: 121px;
+    background: linear-gradient(90deg, #c6c7c8 19.09%, #6fbd98 97.07%);
+    justify-content: flex-start;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px 6px #ffffff47;
+    color: black;
+    line-height: 2;
+    padding-top: 20px;
+    gap: 70px;
 `

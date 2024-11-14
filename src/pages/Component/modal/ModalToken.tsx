@@ -94,15 +94,11 @@ import ModalSendToken from "./ModalSendToken";
                     <Text>Address:</Text>
                     <Text>Token:</Text>
                     <Text>Balance:</Text>
-                    {/* <Text>ID nhận:</Text>
-                    <Text>Số lượng:</Text> */}
                 </Left>
                 <Right>
                     <Input type="text"  value={accountGB} readOnly/>
                     <Input type="text"  value={NameToken} readOnly/>
                     <Input type="text" value={tokenBalance} readOnly/>
-                    {/* <Input type="text" value={IDwallet}/>
-                    <Input type="number" name="fname" onChange={(e) => setSendAmount(e.target.value)} min={0} value={sendAmount}/> */}
                 </Right>
             </Information>
             
@@ -111,17 +107,13 @@ import ModalSendToken from "./ModalSendToken";
                     <Connect/>
                     <div>Connect Wallet</div>
                 </Column>
-                {/* <Column>
-                    <Sell/>
-                    <div>Bán</div>
-                </Column> */}
                 <Column  onClick={BoxsenToken}>
                     <Send/>
-                    <div>Gửi</div>
+                    <div>Transaction</div>
                 </Column>
                 <Column >
                     <Close onClick={onClose}/>
-                    <div>Đóng</div>
+                    <div>Close</div>
                 </Column>
             </Act>
             <div>

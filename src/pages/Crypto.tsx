@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import MenuHome from "./Menu/menuHome";
 import { Address, Background, Body, Chart, Chart_1, Column, ExchangeRate, Head, Information, Item, Logo, Menu, Moneyvalue, Newsfedd, Transaction, Wraper } from "./Component/styledCrypto";
 import images from '../configs/images';
-import { formatDistanceToNow } from 'date-fns';
-import NewsFeed from './Component/Trans';
 
 const TokenInfo: React.FC = () => {
   const [tokenData, setTokenData] = useState<any>(null); 
