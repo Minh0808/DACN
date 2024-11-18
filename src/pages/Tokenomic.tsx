@@ -28,6 +28,7 @@ import {
   ImagesTool,
   Tool,
   NaviTool,
+  Bottom_MobiLe,
 } from "./Component/styled/tokenomic";
 import MenuHome from "./Menu/menuHome";
 import styled from "styled-components";
@@ -62,7 +63,6 @@ const MenuBox = styled.div`
 `;
 const Tokenomic: React.FC = () => {
   const [Active, setActive] = useState(0);
-  const [CloseBox, setCloseBox] = useState(false);
   const [Box1, setBox1] = useState(true);
   const [Box2, setBox2] = useState(false);
 
@@ -228,6 +228,7 @@ const Tokenomic: React.FC = () => {
       <Bottom>
         <TitleBot>
           <img className="footer-PC" src={images.TitleHome5_PC} alt="" />
+          <img className="footer-Mobile" src={images.TitleHome5_Mobile} alt="" />
         </TitleBot>
         <Wraper>
           <img
@@ -278,6 +279,16 @@ const Tokenomic: React.FC = () => {
               </a>
             </IMG>
           </Column3>
+          <Bottom_MobiLe>
+            <img
+              className="ImagesBot"
+              height={30}
+              width={30}
+              src={images.IconHomePage5_5}
+              alt="ImagesBot"
+            />
+            <Text className="textBot">2023 satsbrc.vip. All Right Reserved.</Text>
+          </Bottom_MobiLe>
         </Wraper>
       </Bottom>
     </Background>

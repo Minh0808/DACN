@@ -18,15 +18,31 @@ import {
   Text2,
   Title,
   Wraper,
-  Animation
+  Animation,
+  MenuMobile,
+  MenuIcon,
+  DropdownContent
 } from "./Component/styled/pageHome1";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import ModalToken from "./Component/modal/ModalToken";
 
 
 const HomePage1: React.FC = React.memo(() => {
+  
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [CloseMenu, setCloseMenu] = useState(false)
+  const toggleMenu = () => {
+    setIsOpen(true);
+  };
+
+  const handleClickCloseMenu = () => {
+
+    setIsOpen(false)
+    console.log("Close: active" )
+  }
 
   const [OpenmodalToken, setOpenmodalToken] =  useState(false);
   const connectWallet = async () => {
@@ -58,15 +74,6 @@ const HomePage1: React.FC = React.memo(() => {
             />
           </Link>
           <ButtonNetwork>
-            {/* <Market>
-              <Link to={"/market"} target="blank">
-                <img
-                  className="Market"
-                  src={images.ButtonMarket}
-                  alt="Market"
-                />
-              </Link>
-            </Market> */}
             <Link to={"/tokenomic"} className="Link">
               Tokenomic
             </Link>
@@ -77,6 +84,35 @@ const HomePage1: React.FC = React.memo(() => {
               Crypto New Feed
             </Link>
           </ButtonNetwork>
+          <MenuMobile>
+            <MenuIcon onClick={toggleMenu}/>
+              {isOpen && (
+                <DropdownContent isOpen={isOpen}>
+                <Link to={"/tokenomic"} className="Link">
+                Tokenomic
+                </Link>
+                <Link to={"/aridrop"} className="Link">
+                AirDrop
+               </Link>
+                <Link to={"/crypto"} className="Link">
+                Crypto New Feed
+                </Link>
+              </DropdownContent>
+              )}
+              {CloseMenu && (
+                <DropdownContent isOpen={isOpen}>
+                <Link to={"/tokenomic"} className="Link">
+                Tokenomic
+                </Link>
+                <Link to={"/aridrop"} className="Link">
+                AirDrop
+               </Link>
+                <Link to={"/crypto"} className="Link">
+                Crypto New Feed
+                </Link>
+              </DropdownContent>
+              )}
+          </MenuMobile>
           <Connect onClick={connectWallet}>
             <img className="connect" src={images.ButtonConnect} alt="connect" />
           </Connect>
@@ -91,7 +127,7 @@ const HomePage1: React.FC = React.memo(() => {
           <div className="Title">{a}</div>
         </Animation>
       </Title>
-      <BodyContainer>
+      <BodyContainer onClick={handleClickCloseMenu}>
         <DivLeft>
           <Text1>
             <div className="text1">

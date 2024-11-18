@@ -67,7 +67,7 @@ export const TextContainer = styled.div`
       display: block;
       width: 80%;
       position: absolute;
-      top: 605%;
+      top: 452%;
     }
   }
 `;

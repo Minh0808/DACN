@@ -1,3 +1,4 @@
+
 import styled , {keyframes} from "styled-components";
 
 const slideRightToLeft = keyframes`
@@ -8,7 +9,9 @@ const slideRightToLeft = keyframes`
     transform: translateX(-150%); /* Kết thúc ở bên trái */
   }
 `;
-
+interface DropdownProps {
+  isOpen: boolean;
+}
 export const Background = styled.div`
   width: 100%;
   height: 100%;
@@ -17,13 +20,14 @@ export const Background = styled.div`
   flex-direction: column;
   gap: 30px;
   padding-top: 20px;
-  @media (max-width: 575px) {
+  @media only screen and (max-width: 390px) and (orientation: portrait) {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     gap: 30px;
     padding-top: 0px;
+    overflow: hidden;
   }
 `;
 export const Menu = styled.div`
@@ -32,12 +36,12 @@ export const Menu = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  @media (max-width:575px){
+  @media only screen and (max-width: 390px) and (orientation: portrait){
     height:100%;
   }
   .Logo-Mobile{
     display:none;
-    @media (max-width: 575px) {
+   @media only screen and (max-width: 390px) and (orientation: portrait) {
       width: 100px;
       height: 100px;
       display: block;
@@ -46,7 +50,7 @@ export const Menu = styled.div`
   }
   .Logo {
     width: 300px;
-    @media (max-width: 575px) {
+    @media only screen and (max-width: 390px) and (orientation: portrait) {
       width: 550px;
       height: 100px;
       display: none;
@@ -59,7 +63,7 @@ export const Wraper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  @media (max-width: 575px) {
+ @media only screen and (max-width: 390px) and (orientation: portrait) {
     justify-content: space-between;
     padding-right: 25px;
   }
@@ -95,10 +99,44 @@ export const ButtonNetwork = styled.div`
     border: 1px solid white;
     border-radius: 5px;
   }
-  @media (max-width: 575px) {
+  @media only screen and (max-width: 390px) and (orientation: portrait){
     display: none;
   }
-`;
+`
+export const MenuMobile = styled.div`
+  border: none;
+`
+export const MenuIcon = styled.img`
+  background-image: url(./images/HomeIcon/Menu-Mobile.png);
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: none;
+    @media only screen and (max-width: 390px) and (orientation: portrait){
+    display: block;
+  }
+`
+export const DropdownContent = styled.div<DropdownProps>`
+  display: ${(props) => (props.isOpen ? "block" : "none")};
+  position: absolute;
+  top: 75px;
+  left: 1px;
+  background: linear-gradient(180deg, #6194de 19.09%, #f14353 97.07%);
+  border-radius: 5px;
+  z-index: 10;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  a{
+    color: #00ff89;
+    text-decoration: none;
+  }
+`
 export const Market = styled.div`
   width: 160px;
   height: 40px;
@@ -106,7 +144,7 @@ export const Market = styled.div`
     width: 160px;
     height: 40px;
   }
-  @media (max-width: 575px) {
+  @media only screen and (max-width: 390px) and (orientation: portrait){
     width: 120px;
     height: 35px;
     .Market {
@@ -123,7 +161,7 @@ export const Connect = styled.a`
     width: 160px;
     height: 44px;
   }
-  @media (max-width: 575px) {
+  @media only screen and (max-width: 390px) and (orientation: portrait){
     width: 130px;
     height: 35px;
     .connect {
@@ -182,7 +220,7 @@ export const Title = styled.div`
     -webkit-text-fill-color: transparent;
     font-size: 16px;
   }
-  @media (max-width: 575px) {
+  @media only screen and (max-width: 390px) and (orientation: portrait){
     height: 25px;
 
     align-items: center;
@@ -217,7 +255,7 @@ export const BodyContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  @media (max-width: 575px) {
+  @media only screen and (max-width: 390px) and (orientation: portrait){
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -230,7 +268,7 @@ export const Text = styled.div`
   :hover {
     color: white;
   }
-  @media (max-width: 575px) {
+  @media only screen and (max-width: 390px) and (orientation: portrait) {
     font-size: 24px;
   }
 `;
@@ -276,7 +314,7 @@ export const Text1 = styled.div`
     font-weight: 600;
     line-height: normal;
   }
-  @media (max-width: 575px) {
+  @media only screen and (max-width: 390px) and (orientation: portrait) {
     font-size: 14px;
     width: 100%;
     flex-direction: column;
@@ -324,7 +362,7 @@ export const Text2 = styled.div`
     line-height: normal;
     letter-spacing: 1px;
   }
-  @media (max-width: 575px) {
+  @media only screen and (max-width: 390px) and (orientation: portrait) {
     font-size: 14px;
     font-weight: 900;
     width: 100%;
@@ -347,14 +385,14 @@ export const IconNetwork = styled.div`
   gap: 30px;
   .tw {
     width: 70px;
-    @media (max-width: 575px) {
+    @media only screen and (max-width: 390px) and (orientation: portrait) {
       height: 50px;
       width: 50px;
     }
   }
   .tele {
     width: 70px;
-    @media (max-width: 575px) {
+    @media only screen and (max-width: 390px) and (orientation: portrait) {
       height: 50px;
       width: 50px;
     }
@@ -370,11 +408,11 @@ export const IconCoins = styled.div`
     color: white;
   }
   .IconCoin {
-    @media (max-width: 575px) {
+    @media only screen and (max-width: 390px) and (orientation: portrait) {
       height: 50px;
     }
   }
-  @media (max-width: 575px) {
+  @media only screen and (max-width: 390px) and (orientation: portrait) {
     width: 100%;
     align-items: center;
   }
@@ -389,7 +427,7 @@ export const Row1 = styled.a`
   border-radius: 8px;
   padding: 0px 15px 0px 20px;
   text-decoration: none;
-  @media (max-width: 575px) {
+  @media only screen and (max-width: 390px) and (orientation: portrait) {
     width: 100%;
     padding: 0px 15px 0px 20px;
   }
@@ -400,7 +438,7 @@ export const IconContainer = styled.div`
   gap: 20px;
   width: 100%;
   justify-content: center;
-  @media (max-width: 575px) {
+  @media only screen and (max-width: 390px) and (orientation: portrait) {
     flex-direction: column;
     align-items: center;
     width: 90%;
@@ -417,7 +455,7 @@ export const DivLeft = styled.div`
     align-items: center;
     font-size: 22px;
     gap: 5px;
-    @media (max-width: 575px) {
+    @media only screen and (max-width: 390px) and (orientation: portrait) {
       flex-direction: column;
       align-items: flex-start;
     }
@@ -427,7 +465,7 @@ export const DivLeft = styled.div`
       align-items: center;
       font-size: 22px;
       gap: 5px;
-      @media (max-width: 575px) {
+      @media only screen and (max-width: 390px) and (orientation: portrait) {
         flex-direction: row;
       }
     }
@@ -436,7 +474,7 @@ export const DivLeft = styled.div`
     font-size: 22px;
     font-weight: 900;
     color: white;
-    @media (max-width: 575px) {
+    @media only screen and (max-width: 390px) and (orientation: portrait) {
       font-size: 16px;
       padding-left: 10px;
     }
@@ -448,7 +486,7 @@ export const DivRight = styled.div`
   align-items: center;
   justify-content: center;
   .Images {
-    @media (max-width: 575px) {
+    @media only screen and (max-width: 390px) and (orientation: portrait) {
       width: 70%;
     }
   }

@@ -7,10 +7,6 @@ import { useState, useEffect } from "react";
 const Menu = styled.div`
 width: 100%;
 height: 100%;
-// align-items: center;
-// display: flex;
-// flex-direction: row;
-// justify-content: space-between;
   @media (max-width:575px){
     height:100%;
   }

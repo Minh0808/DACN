@@ -14,10 +14,10 @@ export const Container = styled.div`
   }
   @media (max-width: 575px) {
     justify-content: flex-start;
-    padding-top: 0px;
     position: relative;
     top: 235px;
     height: 1100px;
+    overflow: hidden;
   }
 `;
 export const Modal = styled.div`
@@ -694,10 +694,12 @@ export const ColumnRight = styled.div`
     color: #9e9e9e;
   }
   @media (max-width: 575px) {
-    width: 100%;
-    padding: 0px;
-    height: 150px;
-    text-align: center;
-    display: none;
+    height: 200px;
+    width: 87%;
+    position: relative;
+    font-size: 18px;
+    top: -340px;
+    padding: 10px;
+    line-height: 1.5;
   }
 `;

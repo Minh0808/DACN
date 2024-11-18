@@ -13,11 +13,11 @@ export const ModalContainer_1 = styled.div`
   padding: 0px 175px;
   line-height: 2;
   @media (max-width: 575px) {
-    height: 200px;
-    width: 89%;
+    height: 190px;
+    width: 87%;
     position: relative;
     font-size: 18px;
-    top: -330px;
+    top: -332px;
     padding: 0px;
     line-height: 1.5;
   }
@@ -26,7 +26,7 @@ export const Text = styled.div`
   padding: 0px 40px;
   font-size: 20px;
   @media (max-width: 575px) {
-    padding: 15px 15px;
+    padding: 5px 10px;
     font-size: 18px;
   }
 `;
@@ -43,11 +43,11 @@ export const ModalContainer_2 = styled.div`
   padding: 0px 175px;
   line-height: 2;
   @media (max-width: 575px) {
-    height: 200px;
-    width: 89%;
+    height: 190px;
+    width: 87%;
     position: relative;
     font-size: 18px;
-    top: -330px;
+    top: -332px;
     padding: 0px;
     line-height: 1.5;
   }
@@ -65,11 +65,11 @@ export const ModalContainer_3 = styled.div`
   padding: 0px 175px;
   line-height: 2;
   @media (max-width: 575px) {
-    height: 200px;
-    width: 89%;
+    height: 190px;
+    width: 87%;
     position: relative;
     font-size: 18px;
-    top: -330px;
+    top: -332px;
     padding: 0px;
     line-height: 1.5;
   }
@@ -87,11 +87,11 @@ export const ModalContainer_4 = styled.div`
   padding: 0px 175px;
   line-height: 2;
   @media (max-width: 575px) {
-    height: 200px;
-    width: 89%;
+    height: 190px;
+    width: 87%;
     position: relative;
     font-size: 18px;
-    top: -330px;
+    top: -332px;
     padding: 0px;
     line-height: 1.5;
   }
@@ -113,6 +113,12 @@ export const ModalContainer_Token = styled.div`
   padding-top: 20px;
   gap: 100px;
   z-index: 1000;
+  @media (max-width: 575px) {
+    width: 350px;
+    left: 20px;
+    gap: 85px;
+    height: 340px;
+  }
 `
 export const Information = styled.div`
   display: flex;
@@ -125,6 +131,14 @@ export const Input = styled.input`
   height: 30px;
   border-radius: 5px;
   border: none;
+
+  @media (max-width: 575px) {
+    width: 250px;
+    font-size: 9px;
+  &[name="SendToken"] {
+    width: 230px;
+    }
+  }
 `
 export const Left = styled.div`
   display: flex;
@@ -134,6 +148,9 @@ export const Right = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
+  @media (max-width: 575px) {
+    gap: 17px;
+  }
 `
 export const Act = styled.div`
   display: flex;
@@ -141,6 +158,9 @@ export const Act = styled.div`
   width: 100%;
   justify-content: space-evenly;
   gap: 50px;
+  @media (max-width: 575px) {
+    gap: 15px;
+  }
 `
 export const Send = styled.div`
   width: 50px;
@@ -207,4 +227,10 @@ export const BoxSendToken = styled.div`
     line-height: 2;
     padding-top: 20px;
     gap: 70px;
+    @media (max-width: 575px) {
+      width: 330px;
+      height: 320px;
+      left: 30px;
+      top: 140px;
+  }
 `

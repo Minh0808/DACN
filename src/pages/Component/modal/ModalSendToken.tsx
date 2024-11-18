@@ -120,8 +120,8 @@ const ModalSendToken: React.FC <{ onClose: () => void }> = ({ onClose }) =>{
                     <Text>Balance:</Text>
                 </Left>
                 <Right>
-                <Input type="text" onChange={(e) => setID(e.target.value)} value={IDwallet}/>
-                <Input type="number" name="fname" onChange={(e) => setSendAmount(e.target.value)} min={0} value={sendAmount}/>
+                  <Input name="SendToken" type="text" onChange={(e) => setID(e.target.value)} value={IDwallet}/>
+                  <Input name="SendToken" type="number"  onChange={(e) => setSendAmount(e.target.value)} min={0} value={sendAmount}/>
                 </Right>
             </Information>
             <Act>

@@ -8,11 +8,6 @@ export const Container = styled.div`
   gap: 30px;
   align-items: center;
   background: #13161f;
-  @media (max-width: 575px) {
-    padding-top: 0px;
-    position: relative;
-    top: -50px;
-  }
 `;
 export const Wraper = styled.div`
   display: flex;
@@ -233,7 +228,7 @@ export const Emaill = styled.div`
     }
   }
 `;
-export const Bottom = styled.div`
+export const Bottom_MobiLe = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -243,10 +238,9 @@ export const Bottom = styled.div`
   width: 100%;
   @media (max-width: 575px) {
     position: relative;
-    top: 30px;
     border-top: 1px solid #99999999;
     width: 100%;
-    padding: 25px 0px 0px 0px;
+    padding: 10px 0px 10px 0px;
   }
   .ImagesBot {
     @media (max-width: 575px) {

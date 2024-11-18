@@ -83,6 +83,9 @@ export const Box = styled.div`
   border-radius: 12px;
   gap: 50px;
   align-items: center;
+  @media only screen and (max-width: 390px) and (orientation: portrait){
+    gap: 10px;
+  }
   .Box2 {
     display: flex;
     flex-direction: row;
@@ -158,12 +161,20 @@ export const View = styled.div`
   height: 44px;
   background-size: cover;
   background-position: center;
+  @media only screen and (max-width: 390px) and (orientation: portrait){
+    width: 50px;
+    height: 20px;
+  }
 `;
 export const Trade = styled.div`
   width: 107px;
   height: 44px;
   background-size: cover;
   background-position: center;
+  @media only screen and (max-width: 390px) and (orientation: portrait){
+    width: 50px;
+    height: 20px;
+  }
 `;
 export const BoxBody = styled.div`
   width: 95%;
@@ -215,11 +226,22 @@ export const ImagesTool = styled.img`
 export const Bottom = styled.div`
   width: 100%;
   height: 100%;
+
+  @media only screen and (max-width: 390px) and (orientation: portrait){
+    padding-top: 50px;
+  }
 `;
 export const TitleBot = styled.div`
   width: 100%;
   height: 200px;
   .footer-PC {
+    width: 100%;
+    height: 100%;
+    @media only screen and (max-width: 390px) and (orientation: portrait){
+      display: none;
+    }
+  }
+  .footer-Mobile{
     width: 100%;
     height: 100%;
   }
@@ -389,4 +411,31 @@ export const IMG = styled.div`
   .telegram {
     height: 40px;
   }
-`;
+`
+export const Bottom_MobiLe = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0px 20px 0px;
+  border-top: 1px solid #9999;
+  width: 100%;
+  @media (max-width: 575px) {
+    position: relative;
+    border-top: 1px solid #99999999;
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+  }
+  .ImagesBot {
+    @media (max-width: 575px) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .textBot {
+    color: white;
+    @media (max-width: 575px) {
+      font-size: 14px;
+    }
+  }
+`

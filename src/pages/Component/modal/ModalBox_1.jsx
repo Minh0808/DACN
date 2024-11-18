@@ -42,11 +42,15 @@ const ModalContainer =styled.div`
       }
 `
 const Row =styled.div`
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: space-between;
+  width: 100%;
+  @media only screen and (max-width: 390px) and (orientation: portrait){
+   flex-direction: column;
+   gap: 20px;
+  }
 `
 const Column = styled.div`
   width: 100%;

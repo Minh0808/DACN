@@ -34,6 +34,7 @@ const ModalContainer =styled.div`
       .from{
         width: 20%;
       }
+      
 `
 const Row =styled.div`
     display: flex;
@@ -41,6 +42,10 @@ const Row =styled.div`
     gap: 50px;
     justify-content: space-between;
     width: 100%;
+    @media only screen and (max-width: 390px) and (orientation: portrait){
+      flex-direction: column;
+      gap: 20px
+    }
 `
 const Column = styled.div`
   width: 100%;
@@ -57,7 +62,9 @@ const Column = styled.div`
   .address {
     color: #979797;
   }
-  
+  @media only screen and (max-width: 390px) and (orientation: portrait){
+      gap: 5px;
+    }
 `;
 const ModalBox_2 = () => {
     return (

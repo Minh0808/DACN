@@ -10,9 +10,6 @@ export const Container = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   margin-top: 50px;
-  @media (max-width: 575px) {
-    height: 1450px;
-  }
 `;
 export const Wraper = styled.div`
   display: flex;
@@ -53,6 +50,7 @@ export const RowTop = styled.div`
   }
   @media (max-width: 575px) {
     flex-direction: column;
+    align-items: center;
   }
 `;
 export const Text = styled.div`

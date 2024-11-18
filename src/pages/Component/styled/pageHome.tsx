@@ -6,4 +6,5 @@ export const BackgroundHome = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  overflow: hidden;
 `;

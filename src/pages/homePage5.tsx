@@ -6,11 +6,11 @@ import {
   Title,
   Wraper,
   IMG,
-  Bottom,
   Column2,
   Column3,
   Input,
   Emaill,
+  Bottom_MobiLe,
 } from "./Component/styled/pageHome5";
 import { useEffect, useState } from "react";
 
@@ -84,7 +84,7 @@ const PageHome5: React.FC = () => {
           </IMG>
         </Column3>
       </Wraper>
-      <Bottom>
+      <Bottom_MobiLe>
         <img
           className="ImagesBot"
           height={30}
@@ -93,7 +93,7 @@ const PageHome5: React.FC = () => {
           alt="ImagesBot"
         />
         <Text className="textBot">2023 satsbrc.vip. All Right Reserved.</Text>
-      </Bottom>
+      </Bottom_MobiLe>
     </Container>
   );
 };

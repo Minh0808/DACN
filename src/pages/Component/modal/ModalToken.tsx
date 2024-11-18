@@ -32,7 +32,7 @@ import ModalSendToken from "./ModalSendToken";
             console.log("Account:", account);
             return {signer, account}
           } catch (error) {
-            console.error("Vui long caif dat metamask:", error);
+            console.error("Please install metamask!", error);
           }
         } else {
           console.error("Ethereum provider is not available");
