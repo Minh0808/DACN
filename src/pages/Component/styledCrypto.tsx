@@ -79,7 +79,7 @@ export const Item = styled.div`
 
 `
 export const Moneyvalue = styled.div`
-  color: #b71121;
+  color: #0ddf7e;
 
 `
 export const ExchangeRate = styled.div`

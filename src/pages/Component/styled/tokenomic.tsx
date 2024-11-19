@@ -244,6 +244,10 @@ export const TitleBot = styled.div`
   .footer-Mobile{
     width: 100%;
     height: 100%;
+    display: none;
+    @media only screen and (max-width: 390px) and (orientation: portrait){
+      display: block;
+    }
   }
 `;
 export const Wraper = styled.div`

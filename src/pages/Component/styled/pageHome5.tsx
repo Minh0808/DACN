@@ -254,4 +254,4 @@ export const Bottom_MobiLe = styled.div`
       font-size: 14px;
     }
   }
-`;
+`
